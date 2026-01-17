@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_record_item"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imgType"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="@null"
+        android:layout_marginEnd="12dp" />
+
+    <!-- 左侧：电话 + 时间（都一行，过长省略） -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="📞 138-1234-5678" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="2026-01-04 14:30" />
+    </LinearLayout>
+
+    <!-- 右侧：Points + Status -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/txtPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:maxLines="1"
+            tools:text="⭐ +2 Points" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="✓ Completed" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -7,4 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="pp_pink">#FFEC3B9D</color>
+    <color name="pp_purple">#FF7B2CFF</color>
+    <color name="pp_title_purple">#FF9B2BFF</color>
+
+    <color name="pp_bg">#FFF6F0FF</color>
+    <color name="pp_card_bg">#FFFFFFFF</color>
+    <color name="pp_card_stroke">#FFE3CFFF</color>
+
+    <color name="pp_item_bg">#FFE9FFF1</color>
+    <color name="pp_item_stroke">#FF9BE7B7</color>
+
+    <color name="pp_text_primary">#FF1B1B1F</color>
+    <color name="pp_text_muted">#FF7A7A86</color>
+
+    <color name="pp_btn_text">#FFFFFFFF</color>
+    <color name="pp_success_green">#FF16B457</color>
 </resources>

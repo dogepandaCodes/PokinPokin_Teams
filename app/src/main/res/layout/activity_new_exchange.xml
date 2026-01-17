@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pp_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header (same gradient style) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_header_gradient"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✨ New Plushie Exchange ✨"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload photo, enter phone, and points"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:alpha="0.95"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- Big card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_big_card"
+                android:padding="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Process Plushie Exchange"
+                    android:textColor="@color/pp_title_purple"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <!-- Upload + Inputs row (stacked on phone screens) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📸 Upload Plushie Photo"
+                        android:textColor="@color/pp_pink"
+                        android:textStyle="bold"/>
+
+                    <!-- Upload box -->
+                    <LinearLayout
+                        android:id="@+id/uploadBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_upload_dashed"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/plushiePreview"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@android:drawable/ic_menu_upload"
+                            android:contentDescription="preview"/>
+
+                        <TextView
+                            android:id="@+id/uploadHint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Click to upload plushie photo"
+                            android:textColor="@color/pp_text_primary"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Supports JPG, PNG"
+                            android:textColor="@color/pp_text_muted"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <!-- Phone -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📞 Customer Phone Number"
+                        android:textColor="@color/pp_pink"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"/>
+
+                    <EditText
+                        android:id="@+id/phoneInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@drawable/bg_input_pp"
+                        android:hint="138-1234-5678"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:inputType="phone"/>
+
+                    <!-- Points (自由输入，不限 1/2) -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ Exchange Points"
+                        android:textColor="@color/pp_pink"
+                        android:textStyle="bold"
+                        android:layout_marginTop="14dp"/>
+
+                    <EditText
+                        android:id="@+id/pointsInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@drawable/bg_input_pp"
+                        android:hint="e.g. 5"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <!-- Buttons row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        android:id="@+id/confirmBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_pill_button"
+                        android:gravity="center"
+                        android:text="✓  Confirm Exchange"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/cancelBtn"
+                        android:layout_width="120dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_cancel_pill"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="@color/pp_text_primary"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
